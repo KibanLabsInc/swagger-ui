@@ -61,7 +61,9 @@ class SwaggerUi extends Backbone.Router
     @options.url = url
     @headerView.update(url)
 
-    @api = new SwaggerClient(@options)
+    @options.authorizations = window.authorizations
+
+    @api = new SwaggerClient(url, @options)
 
   # collapse all sections
   collapseAll:() ->

@@ -11,10 +11,12 @@ qp = qp ? JSON.parse('{"' + qp.replace(/&/g, '","').replace(/=/g,'":"') + '"}',
     return key===""?value:decodeURIComponent(value) }
   ):{}
 
-if (window.opener.swaggerUi.tokenUrl)
+if (window.opener.swaggerUi.tokenUrl) {
     window.opener.processOAuthCode(qp);
-else
+} else {
     window.opener.onOAuthComplete(qp);
+    window.opener.swaggerUi.load();
+}
 
 window.close();
 </script>

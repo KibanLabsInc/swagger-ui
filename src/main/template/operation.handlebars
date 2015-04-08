@@ -25,7 +25,7 @@
         <p class="markdown">{{{description}}}</p>
         {{/if}}
         {{#oauth}}
-        <div class="auth">
+        <div style="display:none;" class="auth">
         <span class="api-ic ic-error"></span>{{/oauth}}
         {{#each oauth}}
           <div id="api_information_panel" style="top: 526px; left: 776px; display: none;">
@@ -36,7 +36,7 @@
         {{/each}}
         {{#oauth}}</div>{{/oauth}}
         {{#oauth}}
-        <div class='access'>
+        <div style="display:none;" class='access'>
           <span class="api-ic ic-off" title="click to authenticate"></span>
         </div>
         {{/oauth}}
